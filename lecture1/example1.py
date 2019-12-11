@@ -14,13 +14,13 @@ class EdxLogin(unittest.TestCase):
         # Assert that 'edX' is present in browser title
         self.assertIn('edX', self.driver.title)
         # Find and fill the email field
-        email_elem = self.driver.find_element_by_css_selector('deummy_elail')
-        email_elem.send_keys('temp_user@yopmail.com')
+        email_elem = self.driver.find_element_by_css_selector('#login-email')
+        email_elem.send_keys('dummyemail')
         #Find and fill the password field
-        pwd_elem = self.driver.find_element_by_css_selector('dummy_password')
-        pwd_elem.send_keys('edxedxedx1')
+        pwd_elem = self.driver.find_element_by_css_selector('#login_password')
+        pwd_elem.send_keys('dummypassword')
         # Find and click the submit button
-        subnit_elem = self.driver.find_element_by_css_selector('dummy_button')
+        subnit_elem = self.driver.find_element_by_css_selector('button[type="submit]')
         subnit_elem.click()
         #JUST FOR TRAINING PURPOSES< DON"T USE 'time.sleep' IN ACTUAL TESTS
         time.sleep(5)
